@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:vm="clr-namespace:HereticalEngineEditor.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="230"
+        x:Class="HereticalEngineEditor.Views.ProjectCreationWindow"
+		x:DataType="vm:ProjectCreationViewModel"
+        Width="600" Height="230"
+        CanResize="False"
+        Title="Heretical Engine">
+
+	<Grid Margin="20" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="Auto,Auto,*">
+
+		<TextBlock Text="Создание проекта" FontSize="20" Grid.ColumnSpan="2" Margin="0,0,0,20"/>
+
+		<TextBlock Text="Путь проекта:" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,10,0"/>
+		<TextBox Text="{Binding ProjectPath}" Grid.Row="1" Grid.Column="1" Width="400" ToolTip.Tip="Директория для создания проекта"/>
+		<Button Content="📁" Click="OnChooseFolderClick" Grid.Row="1" Grid.Column="3" Margin="10,0,0,0" ToolTip.Tip="Выбрать директорию"/>
+
+		<TextBlock Text="Имя проекта:" Grid.Row="2" VerticalAlignment="Center" Margin="0,10,10,0"/>
+		<TextBox Text="{Binding ProjectName}" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0" Width="400" ToolTip.Tip="Наименование проекта, используемое для создания директории и файлов. Должно состоять только из символов латинского алфавита, цифр, и подчеркиваний"/>
+		<TextBlock Text="{Binding ErrorMessage}"
+				   Foreground="Red"
+				   Grid.Row="3" Grid.ColumnSpan="2"
+				   Margin="0,0,0,10"
+				   TextWrapping="Wrap"/>
+				   
+		<Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="0,20,0,0" ColumnDefinitions="Auto,*">
+			<Button Content="Назад" Command="{Binding BackCommand}" HorizontalAlignment="Left"/>
+			<Button Content="Создать проект" Command="{Binding CreateCommand}" HorizontalAlignment="Right" Grid.Column="1"/>
+		</Grid>
+	</Grid>
+</Window>

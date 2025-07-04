@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:fluent="clr-namespace:Avalonia.Themes.Fluent;assembly=Avalonia.Themes.Fluent"
+             xmlns:views="clr-namespace:HereticalEngineEditor.Views"
+			 xmlns:viewmodels="clr-namespace:HereticalEngineEditor.ViewModels"
+			 x:Class="HereticalEngineEditor.App"
+             xmlns:local="using:HereticalEngineEditor"
+			 RequestedThemeVariant="Dark">
+	
+    <Application.DataTemplates>
+    </Application.DataTemplates>
+  
+	
+	
+    <Application.Styles>
+		<FluentTheme>
+			<FluentTheme.Palettes>
+				<ColorPaletteResources x:Key="Dark" Accent="#ffde2929" AltHigh="Black" AltLow="Black" AltMedium="Black" AltMediumHigh="Black" AltMediumLow="Black" BaseHigh="White" BaseLow="#ff2c3942" BaseMedium="#ff8d9fa9" BaseMediumHigh="#ffa5b8c3" BaseMediumLow="#ff5c6c76" ChromeAltLow="#ffa5b8c3" ChromeBlackHigh="Black" ChromeBlackLow="#ffa5b8c3" ChromeBlackMedium="Black" ChromeBlackMediumLow="Black" ChromeDisabledHigh="#ff2c3942" ChromeDisabledLow="#ff8d9fa9" ChromeGray="#ff75858f" ChromeHigh="#ff75858f" ChromeLow="#ff091b30" ChromeMedium="#ff122334" ChromeMediumLow="#ff23323d" ChromeWhite="White" ListLow="#ff122334" ListMedium="#ff2c3942" RegionColor="#ff0c1214" />
+			</FluentTheme.Palettes>
+		</FluentTheme>
+    </Application.Styles>
+</Application>
